@@ -1,0 +1,249 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  margin-top: 2rem;
+}
+
+.form__wrapper {
+  margin-top: 3rem;
+}
+
+.form__wrapper form {
+  box-shadow: #008080 0px 3px 8px;
+  border-radius: 8px;
+  width: 300px;
+  padding: 2rem 2rem;
+  background-color: transparent;
+}
+
+form > input {
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  outline: none;
+  box-shadow: #008080 0px 3px 8px;
+  border: none;
+  background-color: transparent;
+}
+
+input::placeholder {
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+.btn-wrapper {
+  text-align: center;
+}
+
+.btn-submit {
+  width: 50%;
+  padding: 8px 2px;
+  background-color: teal;
+  border: none;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  transition: all 300ms ease-in-out;
+  cursor: pointer;
+}
+
+.btn-submit:hover {
+  background-color: rgb(137, 170, 170);
+}
+
+section {
+  width: 300px;
+  margin-top: 5rem;
+}
+
+.table__wrapper {
+  width: 100%;
+}
+
+.btn-pencil,
+.btn-trash {
+  cursor: pointer;
+  transition: all 300ms ease-in;
+}
+
+.btn-trash {
+  color: rgb(231, 74, 74);
+}
+
+.btn-pencil {
+  color: rgb(81, 151, 104);
+  padding-right: 1rem;
+}
+
+span:hover {
+  scale: 1.2;
+}
+
+@media (min-width: 768px) {
+  .form__wrapper form {
+    width: 500px;
+  }
+
+  form input[name='Name'] {
+    float: left;
+    width: 49%;
+  }
+
+  form input[name='Surname'] {
+    float: right;
+    width: 49%;
+  }
+  form input[name='Email'] {
+    float: left;
+    width: 49%;
+  }
+
+  form input[name='Age'] {
+    float: right;
+    width: 49%;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  table th {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: #e4e1e1;
+  }
+
+  table td {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border: none;
+    border-bottom: 1px solid #eee;
+  }
+
+  table tbody tr {
+    transition: all 100ms ease-in;
+  }
+
+  table tbody tr:hover {
+    background-color: rgb(133, 216, 216);
+  }
+
+  section {
+    width: 768px;
+  }
+
+  .action-btns {
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 768px), (max-device-width: 768px) {
+  /* Force table to not be like tables anymore */
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  /* Hide table headers (but not display: none;, for accessibility) */
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    margin: 0 0 1rem 0;
+  }
+
+  tr:nth-child(odd) {
+    background: transparent;
+    margin-bottom: 2rem;
+  }
+
+  td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 0;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+
+  /*
+		Label the data
+    You could also use a data-* attribute and content for this. That way "bloats" the HTML, this way means you need to keep HTML and CSS in sync. Lea Verou has a clever way to handle with text-shadow.
+		*/
+  td:nth-of-type(1):before {
+    content: 'Name';
+    font-weight: 600;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  td:nth-of-type(2):before {
+    content: 'Surname';
+    font-weight: 600;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  td:nth-of-type(3):before {
+    content: 'Email';
+    font-weight: 600;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  td:nth-of-type(4):before {
+    content: 'Age';
+    font-weight: 600;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  td:nth-of-type(5):before {
+    content: 'Actions';
+    font-weight: 600;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+}
