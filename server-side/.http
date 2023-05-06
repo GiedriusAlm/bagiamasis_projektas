@@ -1,10 +1,10 @@
 ### GET single user
-  GET http://localhost:5000/api/customers
+  GET http://localhost:5001/api/customers
 
 
 
 ###
-POST http://localhost:5000/api/customers
+POST http://localhost:5001/api/customers
 Content-Type: application/json
 
 {
@@ -15,7 +15,7 @@ Content-Type: application/json
 }
 
 ### UPDATE single user
-  PUT http://localhost:5000/api/customers/6456652a398efb77bb9eddb6
+  PUT http://localhost:5001/api/customers/6456652a398efb77bb9eddb6
   Content-Type: application/json
 
 {
@@ -28,5 +28,5 @@ Content-Type: application/json
 
 
 ### DELETE single user
-  DELETE http://localhost:5000/api/customers/6456065d070145e89527da07
+  DELETE http://localhost:5001/api/customers/6456065d070145e89527da07
 

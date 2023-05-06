@@ -7,7 +7,7 @@ import Customer from './models/customer.model.js';
 const app = express();
 // app.use(cors());
 
-const PORT = 5000;
+const PORT = 5001;
 const MONGODB_URI = 'mongodb+srv://giedrius:egzaminas@cluster0.lbe9lny.mongodb.net/clients?retryWrites=true&w=majority';
 app.use(express.json());
 
