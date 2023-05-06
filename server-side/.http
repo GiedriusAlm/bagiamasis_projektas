@@ -1,0 +1,32 @@
+### GET single user
+  GET http://localhost:5000/api/customers
+
+
+
+###
+POST http://localhost:5000/api/customers
+Content-Type: application/json
+
+{
+  "name": "Giedrius 2",
+  "surname": "Almonaitis 2",
+  "email": "test2@2test 2",
+  "age": 40
+}
+
+### UPDATE single user
+  PUT http://localhost:5000/api/customers/6456652a398efb77bb9eddb6
+  Content-Type: application/json
+
+{
+  "name": "Diana",
+  "surname": "Prince",
+  "email": "diana2@prince",
+  "age": 35
+}
+
+
+
+### DELETE single user
+  DELETE http://localhost:5000/api/customers/6456065d070145e89527da07
+
