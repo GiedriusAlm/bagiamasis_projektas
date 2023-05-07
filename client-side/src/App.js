@@ -2,7 +2,7 @@ import './App.css';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import ICONS from './shared/icons';
-
+import Modal from './components/molecules/modal';
 function App() {
   const [name, setName] = useState('');
   const [surname, setSurname] = useState('');
@@ -136,6 +136,7 @@ function App() {
           )}
         </div>
       </section>
+      <Modal />
     </div>
   );
 }
